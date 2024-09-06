@@ -1,0 +1,346 @@
+/* The base CSS file of all components */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Home.css */
+
+.hero-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #f0f4f8;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero-subtitle {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #0056b3;
+}
+
+.hero-image-placeholder {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 300px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+/* Topics.css */
+
+.topics-container {
+  display: flex;
+  gap: 20px; /* space between the cards */
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card {
+  background-color: darkgray;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%; /* ensures cards are side-by-side */
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #6c757d;
+}
+
+.modal-container {
+  max-width: 75%;
+}
+
+.modal-dialog {
+  max-width: 75%;
+}
+
+.modal-body {
+  overflow-x: auto;
+}
+
+
+/* Events.css */
+
+.events-container {
+  display: flex;
+  gap: 40px; /* Space between calendar and events list */
+  padding: 20px;
+}
+
+.calendar-section {
+  width: 60%;
+}
+
+.calendar-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for 7 days of the week */
+  gap: 10px;
+}
+
+.day {
+  font-weight: bold;
+  text-align: center;
+}
+
+.date {
+  background-color: darkgray;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.events-list {
+  width: 40%;
+}
+
+.events-list h3 {
+  margin-bottom: 10px;
+}
+
+.events-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.events-list li {
+  background-color: darkgray;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* About.css */
+
+.about-container {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.statement-of-purpose {
+  margin-bottom: 40px;
+}
+
+.statement-of-purpose h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.statement-of-purpose p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.our-team-section {
+  margin-top: 40px;
+}
+
+.our-team-section h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.our-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.team-card {
+  background-color: darkgray;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.team-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-name {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.team-position {
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+/* Contacts.css */
+
+.contacts-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.contacts-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
