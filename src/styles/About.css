@@ -1,0 +1,65 @@
+/* About.css */
+
+.about-container {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.statement-of-purpose {
+  margin-bottom: 40px;
+}
+
+.statement-of-purpose h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.statement-of-purpose p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.our-team-section {
+  margin-top: 40px;
+}
+
+.our-team-section h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.our-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.team-card {
+  background-color: darkgray;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.team-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-name {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.team-position {
+  color: #6c757d;
+  font-size: 0.9em;
+}

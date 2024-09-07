@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import "../styles/About.css";
 
 function About() {
   const teamMembers = [
@@ -22,7 +23,7 @@ function About() {
       name: "Michael Brown",
       position: "Treasurer",
     },
-  ]
+  ];
 
   return (
     <div className="about-container">
@@ -43,16 +44,20 @@ function About() {
         <div className="our-team">
           {teamMembers.map((member, index) => (
             <div className="team-card" key={index}>
-            <img src={member.img} alt={`${member.name}`} className="team-img" />
-            <h3 className="team-name">{member.name}</h3>
-            <p className="team-position">{member.position}</p>
-          </div>
+              <img
+                src={member.img}
+                alt={`${member.name}`}
+                className="team-img"
+              />
+              <h3 className="team-name">{member.name}</h3>
+              <p className="team-position">{member.position}</p>
+            </div>
           ))}
         </div>
       </section>
     </div>
   );
-};
+}
 
 export default About;
 

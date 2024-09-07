@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
+import "../styles/Topics.css";
 
 function Topics() {
   const [show, setShow] = useState(false);

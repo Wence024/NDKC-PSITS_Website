@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import "../styles/Events.css";
 
 function Events() {
   const currentDate = new Date();
@@ -24,11 +25,15 @@ function Events() {
     <div className="events-container">
       <div className="calendar-section">
         <div className="calendar-header">
-          <h3>{currentDate.toLocaleString('default', { month: 'long' })} {year}</h3>
+          <h3>
+            {currentDate.toLocaleString("default", { month: "long" })} {year}
+          </h3>
         </div>
         <div className="calendar">
-          {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-            <div className="day" key={day}>{day}</div>
+          {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
+            <div className="day" key={day}>
+              {day}
+            </div>
           ))}
           {calendarDays.map((date, index) => (
             <div className="date" key={index}>
@@ -48,7 +53,7 @@ function Events() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default Events
+export default Events;
