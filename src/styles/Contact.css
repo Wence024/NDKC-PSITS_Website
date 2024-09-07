@@ -1,58 +1,41 @@
-/* Contacts.css */
+/* src/styles/Contact.css */
 
-.contacts-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  line-height: 1.6;
-}
-
-.contacts-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2em;
+.contact-container {
+  padding: 40px;
+  background: linear-gradient(135deg, #1e1e1e, #121212); /* Dark gradient background */
+  color: #e0e0e0; /* Light text color */
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
+  background: #1e1e1e; /* Dark form background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for modern look */
 }
 
-.form-group {
-  margin-bottom: 15px;
+.contact-form .form-label {
+  color: #00bcd4; /* Accent color for labels */
 }
 
-.form-group label {
-  margin-bottom: 5px;
-  display: block;
-  font-weight: bold;
+.contact-form .form-control {
+  background: #333; /* Dark input background */
+  color: #e0e0e0; /* Light text color for inputs */
+  border: 1px solid #444; /* Border color */
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
+.contact-form .form-control::placeholder {
+  color: #888; /* Placeholder text color */
 }
 
-.form-group textarea {
-  height: 150px;
-  resize: vertical;
-}
-
-.submit-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
+.contact-form .btn-primary {
+  background-color: #00bcd4; /* Accent color for button */
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1em;
-  margin-top: 10px;
 }
 
-.submit-btn:hover {
-  background-color: #0056b3;
+.contact-form .btn-primary:hover {
+  background-color: #0097a7; /* Darker shade on hover */
+}
+
+.alert {
+  background-color: #00bcd4; /* Accent color for alert */
+  color: #121212; /* Dark text color */
 }
