@@ -1,101 +1,85 @@
+// src/TopicsPage.js
+
 import React, { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
-import "../styles/Topics.css";
+import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
+import "../styles/Topics.css"; // Import custom CSS
 
-function Topics() {
-  const [show, setShow] = useState(false);
-  const [modalContent, setModalContent] = useState({ title: "", body: "" });
+const topics = [
+  {
+    title: "Workshops and Trainings",
+    shortDescription: "Explore various workshops and training sessions to enhance your skills.",
+    longDescription: "Dive into a range of workshops and training sessions designed to boost your skills and knowledge. Whether you're looking to master a new technology, refine your professional abilities, or explore a new field, these interactive sessions offer hands-on learning experiences. Benefit from expert guidance and practical exercises tailored to help you achieve your personal and career goals.",
+    image: "https://via.placeholder.com/150"
+  },
+  {
+    title: "Hackathons and Competitions",
+    shortDescription: "Participate in hackathons and competitions to challenge yourself and win prizes.",
+    longDescription: "Get involved in hackathons and competitions to push your creative and technical limits while working on real-world problems. These events provide a dynamic platform to collaborate with peers, innovate, and showcase your talents. Plus, you’ll have the opportunity to win exciting prizes and gain recognition for your efforts.",
+    image: "https://via.placeholder.com/150"
+  },
+  {
+    title: "Community Outreach",
+    shortDescription: "Engage in community outreach programs to give back and make a difference",
+    longDescription: "Participate in community outreach programs to actively contribute to the well-being of your local area and beyond. These initiatives offer a chance to volunteer your time and skills, make meaningful connections, and address important social issues. By engaging in outreach, you not only help others but also enrich your own life with rewarding experiences.",
+    image: "https://via.placeholder.com/150"
+  },
+];
 
-  const handleShow = (title, body) => {
-    setModalContent({ title, body });
-    setShow(true);
+const TopicsPage = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState({});
+
+  const handleShowModal = (content) => {
+    setModalContent(content);
+    setShowModal(true);
   };
 
-  const handleClose = () => setShow(false);
+  const handleCloseModal = () => setShowModal(false);
 
   return (
-    <div className="topics-container">
-      <div className="card">
-        <img src="https://via.placeholder.com/750x1000" alt="Workshop" />
-        <h3>Workshops and Trainings</h3>
-        <p>
-          Explore various workshops and training sessions to enhance your
-          skills.
-        </p>
-        <Button
-          variant="primary"
-          onClick={() =>
-            handleShow(
-              "Workshops and Trainings",
-              "Explore various workshops and training sessions to enhance your skills. Workshops cover a range of topics from programming to design, ensuring there is something for everyone looking to upskill. Join our sessions to network with industry experts and other learners."
-            )
-          }
-        >
-          Read More
-        </Button>
-      </div>
-      <div className="card">
-        <img src="https://via.placeholder.com/750x1000" alt="Hackathons" />
-        <h3>Hackathons and Competitions</h3>
-        <p>
-          Participate in hackathons and competitions to challenge yourself and
-          win prizes.
-        </p>
-        <Button
-          variant="primary"
-          onClick={() =>
-            handleShow(
-              "Hackathons and Competitions",
-              "Participate in hackathons and competitions to test your skills and compete with others. Our events offer exciting challenges, great networking opportunities, and amazing prizes for winners. Whether you are a seasoned developer or just starting, there’s a place for you."
-            )
-          }
-        >
-          Read More
-        </Button>
-      </div>
-      <div className="card">
-        <img src="https://via.placeholder.com/750x1000" alt="Outreach" />
-        <h3>Community Outreach</h3>
-        <p>
-          Engage in community outreach programs to give back and make a
-          difference.
-        </p>
-        <Button
-          variant="primary"
-          onClick={() =>
-            handleShow(
-              "Community Outreach",
-              "Engage in community outreach programs to make a positive impact on the community. Our outreach programs include volunteering, mentorship, and local events aimed at helping those in need and fostering community spirit. Get involved and make a difference today."
-            )
-          }
-        >
-          Read More
-        </Button>
-      </div>
+    <Container fluid className="topics-page">
+      <Row className="text-center mb-4">
+        <Col>
+          <h1 className="text-light">Club Topics</h1>
+        </Col>
+      </Row>
+      <Row>
+        {topics.map((topic, index) => (
+          <Col md={6} lg={4} className="mb-4" key={index}>
+            <Card className="bg-dark text-light border-light">
+              <Card.Img variant="top" src={topic.image} />
+              <Card.Body>
+                <Card.Title>{topic.title}</Card.Title>
+                <Card.Text>{topic.shortDescription}</Card.Text>
+                <Button 
+                  variant="primary"
+                  onClick={() => handleShowModal(topic)}
+                >
+                  Read More
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
 
       {/* Modal */}
-      <Modal
-        show={show}
-        onHide={handleClose}
-        dialogClassName="modal-container"
-        aria-labelledby="example-custom-modal-styling-title"
-      >
+      <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title id="example-custom-modal-styling-title">
-            {modalContent.title}
-          </Modal.Title>
+          <Modal.Title>{modalContent.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>{modalContent.body}</p>
+          <img src={modalContent.image} alt={modalContent.title} className="img-fluid mb-3" />
+          <p>{modalContent.longDescription}</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleCloseModal}>
             Close
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </Container>
   );
-}
+};
 
-export default Topics;
+export default TopicsPage;
