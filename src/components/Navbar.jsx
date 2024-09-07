@@ -4,7 +4,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 
 const NavbarComponent = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
         {/* Left-aligned brand/logo */}
         <Navbar.Brand href="/">
@@ -24,11 +24,11 @@ const NavbarComponent = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           {/* Right-aligned navigation links */}
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/topics">Topics</Nav.Link>
-            <Nav.Link as={Link} to="/events">Events</Nav.Link>
-            <Nav.Link as={Link} to="/about">About</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/" className="nav-link">Home</Nav.Link>
+            <Nav.Link as={Link} to="/topics" className="nav-link">Topics</Nav.Link>
+            <Nav.Link as={Link} to="/events" className="nav-link">Events</Nav.Link>
+            <Nav.Link as={Link} to="/about" className="nav-link">About</Nav.Link>
+            <Nav.Link as={Link} to="/contact" className="nav-link">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
