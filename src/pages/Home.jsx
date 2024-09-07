@@ -6,15 +6,17 @@ function Home() {
   return (
     <div className="hero-container">
       <div className="hero-content">
-        <h1 className="hero-title">Welcome to Our Club</h1>
-        <p className="hero-subtitle">
-          Empowering the next generation of IT professionals
-        </p>
-        <div className="hero-buttons">
-          <Link to="/about">About</Link>
+        <div className="hero-text">
+          <h1 className="hero-title display-3">Welcome to Our Club</h1>
+          <p className="hero-subtitle lead">
+            Empowering the next generation of IT professionals
+          </p>
+          <div className="hero-buttons">
+            <Link to="/about" className="btn btn-primary btn-lg">About</Link>
+          </div>
         </div>
+        <div className="hero-image-placeholder"></div>
       </div>
-      <div className="hero-image-placeholder"></div>
     </div>
   );
 }
