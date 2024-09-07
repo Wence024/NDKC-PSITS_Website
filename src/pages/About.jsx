@@ -1,5 +1,8 @@
+// src/About.jsx
+
 import React from "react";
-import "../styles/About.css";
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import '../styles/About.css';
 
 function About() {
   const teamMembers = [
@@ -26,8 +29,8 @@ function About() {
   ];
 
   return (
-    <div className="about-container">
-      <section className="statement-of-purpose">
+    <Container fluid className="about-container">
+      <section className="statement-of-purpose text-center">
         <h2>Our Purpose</h2>
         <p>
           Our club is dedicated to fostering a community of learners and
@@ -40,31 +43,30 @@ function About() {
       </section>
 
       <section className="our-team-section">
-        <h2>Meet Our Team</h2>
-        <div className="our-team">
+        <h2 className="text-center">Meet Our Team</h2>
+        <Row className="our-team">
           {teamMembers.map((member, index) => (
-            <div className="team-card" key={index}>
-              <img
-                src={member.img}
-                alt={`${member.name}`}
-                className="team-img"
-              />
-              <h3 className="team-name">{member.name}</h3>
-              <p className="team-position">{member.position}</p>
-            </div>
+            <Col md={3} key={index} className="team-card-wrapper">
+              <Card className="team-card bg-dark text-light border-0 shadow-lg">
+                <Card.Img
+                  variant="top"
+                  src={member.img}
+                  alt={`${member.name}`}
+                  className="team-img"
+                />
+                <Card.Body className="text-center">
+                  <Card.Title className="team-name">{member.name}</Card.Title>
+                  <Card.Text className="team-position">
+                    {member.position}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
           ))}
-        </div>
+        </Row>
       </section>
-    </div>
+    </Container>
   );
 }
 
 export default About;
-
-// const About = () => {
-//   return (
-
-//   );
-// };
-
-// export default About;
