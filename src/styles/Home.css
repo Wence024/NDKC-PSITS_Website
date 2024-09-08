@@ -1,18 +1,11 @@
 /* Home.css */
 
-body {
-  background-color: #121212;
-  color: #e0e0e0;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 .hero-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a1a1a, #333);
+  background: linear-gradient(135deg, #1e1e1e, #121212);;
   padding: 0 2rem; /* Add padding to prevent content from touching the edges */
 }
 

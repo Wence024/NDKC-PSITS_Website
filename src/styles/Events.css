@@ -2,7 +2,7 @@
 
 .events-container {
   padding: 20px;
-  background-color: #121212;
+  background: linear-gradient(135deg, #1e1e1e, #121212);;
   color: #e0e0e0;
 }
 
