@@ -1,8 +1,37 @@
-# React + Vite
+# Notre Dame of Kidapawan College Philippine Society of Information Technology Students (NDKC-PSITS) Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+The Notre Dame of Kidapawan College Philippine Society of Information Technology Students (NDKC-PSITS) website is a project designed as part of the requirements for our course subject. It serves to inform visitors about the NDKC-PSITS academic club, their IT expeditions, and upcoming events.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Information about the NDKC-PSITS academic club.
+- Details on IT expeditions and events.
+- Contact form for feedback and inquiries.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Bootstrap**: A CSS framework for responsive design and styling.
+
+## Installation Instructions
+
+Installation is not necessary as the website is hosted online for viewing and feedback. You can access the website here: [NDKC-PSITS Website](https://wence024.netlify.app/)
+
+## Usage Instructions
+
+- **Viewing Information**: Navigate through the website to learn more about NDKC-PSITS and its activities.
+- **Submitting Feedback**: Use the contact page to send feedback or inquiries.
+
+## Contributing
+
+We welcome suggestions for improving this website. Feel free to use any layout structures provided, though we ask that you do not copy our content directly.
+
+## License
+
+This project is distributed under an open-source license.
+
+## Contact Information
+
+For any inquiries or feedback, please contact us via email: ewence08@gmail.com
