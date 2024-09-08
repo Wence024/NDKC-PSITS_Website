@@ -1,7 +1,7 @@
 /* src/styles/Events.css */
 
 .events-container {
-  padding: 20px;
+  padding: 40px;
   background: linear-gradient(135deg, #1e1e1e, #121212);;
   color: #e0e0e0;
 }
@@ -14,8 +14,9 @@
   color: #f0f0f0;
 }
 
-.header-section p {
-  color: #b0b0b0;
+.subtitle {
+  font-size: 1.25rem;
+  color: #b0b0b0; /* Light gray for subtitle text */
 }
 
 .calendar-section {

@@ -28,7 +28,8 @@
 
 .hero-title {
   color: #00bcd4; /* Accent color */
-  font-weight: 700;
+  font-size: 3.5em;
+  font-weight: 600;
 }
 
 .hero-subtitle {
@@ -48,7 +49,7 @@
 .hero-image-placeholder {
   flex: 1;
   height: 400px; /* Adjust the height */
-  background-image: url('https://www.thewowstyle.com/wp-content/uploads/2015/01/Most-Beautiful-Places-in-the-World.jpg');
+  background-image: url('../images/Home-img.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 10px;
