@@ -6,6 +6,11 @@
   color: #e0e0e0; /* Light text color */
 }
 
+.subtitle {
+  font-size: 1.25rem;
+  color: #b0b0b0; /* Light gray for subtitle text */
+}
+
 .statement-of-purpose {
   margin-bottom: 60px;
 }

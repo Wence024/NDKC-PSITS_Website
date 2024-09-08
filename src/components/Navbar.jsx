@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import Logo from '../images/PSITS-logo.png'
 
 const NavbarComponent = () => {
   return (
@@ -9,13 +10,13 @@ const NavbarComponent = () => {
         {/* Left-aligned brand/logo */}
         <Navbar.Brand href="/">
           <img
-            src="path-to-your-logo.png" // Replace with the path to your logo
+            src={Logo} // Replace with the path to your logo
             width="30"
             height="30"
             className="d-inline-block align-top"
             alt="Logo"
           />
-          {' '}Your Brand
+          {' '}NDKC-PSITS
         </Navbar.Brand>
         
         {/* Navbar toggle for mobile view */}

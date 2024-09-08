@@ -3,33 +3,101 @@
 import React from "react";
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import '../styles/About.css';
+import President from "../images/Pres.jpg";
+import VicePresident from "../images/VPres.jpg";
+import Secretary from "../images/Sec.jpg";
+import Treasurer from "../images/Treas.jpg";
+import Auditor from "../images/Auditor.jpg";
+import PIO from "../images/PIO.jpg";
+import BSMngr1 from "../images/BSMngr1.jpg";
+import BSMngr2 from "../images/BSMngr2.jpg";
+import RepCS4th from "../images/4thRepCS.jpg";
+import RepIT4th from "../images/4thRepIT.jpg";
+import RepCS3rd from "../images/3rdRepCS.jpg";
+import RepIT3rd from "../images/3rdRepIT.jpg";
+import RepCS2nd from "../images/2ndRepCS.jpg";
+import RepIT2nd from "../images/2ndRepIT.jpg";
 
 function About() {
   const teamMembers = [
     {
-      img: "https://via.placeholder.com/150",
-      name: "John Doe",
+      img: President,
+      name: "Kent Oliver Cartagena",
       position: "President",
     },
     {
-      img: "https://via.placeholder.com/150",
-      name: "Jane Smith",
+      img: VicePresident,
+      name: "Marian Policar",
       position: "Vice President",
     },
     {
-      img: "https://via.placeholder.com/150",
-      name: "Emily Johnson",
+      img: Secretary,
+      name: "Janno Into",
       position: "Secretary",
     },
     {
-      img: "https://via.placeholder.com/150",
-      name: "Michael Brown",
+      img: Treasurer,
+      name: "Dean Lauren Dadivas",
       position: "Treasurer",
+    },
+    {
+      img: Auditor,
+      name: "Paul Andre Cardeño",
+      position: "Auditor",
+    },
+    {
+      img: PIO,
+      name: "Xcylly Campo",
+      position: "PIO",
+    },
+    {
+      img: BSMngr1,
+      name: "Mark Irish Ambrosio",
+      position: "Business Manager",
+    },
+    {
+      img: BSMngr2,
+      name: "Ludwig Razon",
+      position: "Business Manager",
+    },
+    {
+      img: RepCS4th,
+      name: "Jericho Joshua Reynes",
+      position: "4th Year CS Representative",
+    },
+    {
+      img: RepIT4th,
+      name: "Yohadza Ulangkaya",
+      position: "4th Year IT Representative",
+    },
+    {
+      img: RepCS3rd,
+      name: "John Marc Alvarez",
+      position: "3rd Year CS Representative",
+    },
+    {
+      img: RepIT3rd,
+      name: "Gabriel Aguilar",
+      position: "3rd Year IT Representative",
+    },
+    {
+      img: RepCS2nd,
+      name: "Alex Carbonell",
+      position: "2nd Year CS Representative",
+    },
+    {
+      img: RepIT2nd,
+      name: "Darrel Jay Lahoylahoy",
+      position: "2nd Year IT Representative",
     },
   ];
 
   return (
     <Container fluid className="about-container">
+      <Col className="text-center">
+        <h1 className="text-light">About</h1>
+        <h2 className="subtitle mb-4">Learn more about our mission and values.</h2>
+      </Col>
       <section className="statement-of-purpose text-center">
         <h2>Our Purpose</h2>
         <p>

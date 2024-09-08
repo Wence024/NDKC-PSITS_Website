@@ -42,7 +42,7 @@ function Events() {
       <Row className="header-section text-center mb-4">
         <Col>
           <h1 className="text-light">Upcoming Events</h1>
-          <p className="text-light">Stay updated with our latest events and activities.</p>
+          <h2 className="subtitle">Stay updated with our latest events and activities.</h2>
         </Col>
       </Row>
       <Row>

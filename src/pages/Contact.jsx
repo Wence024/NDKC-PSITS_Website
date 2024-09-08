@@ -1,5 +1,3 @@
-// src/Contact.jsx
-
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
@@ -46,8 +44,9 @@ const Contacts = () => {
   return (
     <Container fluid className="contact-container">
       <Row className="justify-content-center">
-        <Col md={8} lg={6}>
-          <h2 className="text-center mb-4">Contact Us</h2>
+        <h1 className="text-center">Contact Us</h1>
+        <h2 className="subtitle text-center mb-4">We'd love to hear from you. Reach out to us below.</h2>
+        <Col md={8} lg={6} className="contact-form-col">
           {showAlert && (
             <Alert variant={showAlert.type} onClose={() => setShowAlert(null)} dismissible>
               {showAlert.message}
@@ -95,6 +94,19 @@ const Contacts = () => {
               Send Message
             </Button>
           </Form>
+        </Col>
+        <Col md={8} lg={6} className="map-col">
+          <div className="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.98239104385!2d125.09300397399602!3d7.011353517303986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f8f91294f2f7c7%3A0xe8335b1d8c9ddffb!2sNotre%20Dame%20of%20Kidapawan%20College!5e0!3m2!1sen!2sph!4v1725788145939!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              title="Google Maps"
+            ></iframe>
+          </div>
         </Col>
       </Row>
     </Container>

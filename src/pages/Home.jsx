@@ -7,7 +7,7 @@ function Home() {
     <div className="hero-container">
       <div className="hero-content">
         <div className="hero-text">
-          <h1 className="hero-title display-3">Welcome to Our Club</h1>
+          <h1 className="hero-title">Welcome to Our Club</h1>
           <p className="hero-subtitle lead">
             Empowering the next generation of IT professionals
           </p>
